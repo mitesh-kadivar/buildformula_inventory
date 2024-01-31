@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "3ecce9a0-7ec8-4617-8a94-0252a5f8efaa",
+		"name": "buildformula_inventory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24462891"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mitesh123@yopmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Mitesh@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product-list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzA2NjczMDgwLCJleHAiOjE3MDY2NzY2ODAsIm5iZiI6MTcwNjY3MzA4MCwianRpIjoiUFZTZFMxWUVaYTNBeUx3ZiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.BjlxBaHJ2OnztHrRA2IxOMVlQXZFhmgsTEfO1mFqwq8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "category",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "min_price",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "max_price",
+							"value": "500000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/product-list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product-list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
